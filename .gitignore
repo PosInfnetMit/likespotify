@@ -3,3 +3,8 @@
 ################################################################################
 
 /.vs
+/src/LikeSpotify/.vs/LikeSpotify/v16
+/src/LikeSpotify/LikeSpotify.CrossCutting/bin/Debug/net5.0
+/src/LikeSpotify/LikeSpotify.CrossCutting/obj
+/src/LikeSpotify/LikeSpotify.Domain/bin/Debug/net5.0
+/src/LikeSpotify/LikeSpotify.Domain/obj
