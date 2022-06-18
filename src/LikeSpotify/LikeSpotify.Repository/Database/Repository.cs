@@ -20,12 +20,14 @@ namespace LikeSpotify.Repository.Database
             this.Context = likeSpotifyContext;
             this.Query = Context.Set<T>();
         }
-        public Task<IDbContextTransaction> CreateTransaction()
+        public async Task<IDbContextTransaction> CreateTransaction()
         {
-            throw new NotImplementedException();
+            return await this.Context.Database.BeginTransactionAsync();
+
+
         }
 
-        public Task<IDbContextTransaction> CreateTransaction(IsolationLevel isolation)
+        public async Task<IDbContextTransaction> CreateTransaction(IsolationLevel isolation)
         {
             throw new NotImplementedException();
         }
