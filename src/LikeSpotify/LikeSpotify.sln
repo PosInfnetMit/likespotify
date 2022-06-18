@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31729.503
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32516.85
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LikeSpotify.Domain", "LikeSpotify.Domain\LikeSpotify.Domain.csproj", "{39339EB8-8B77-468D-AC47-90CE3D8A2416}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LikeSpotify.Domain", "LikeSpotify.Domain\LikeSpotify.Domain.csproj", "{39339EB8-8B77-468D-AC47-90CE3D8A2416}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LikeSpotify.CrossCutting", "LikeSpotify.CrossCutting\LikeSpotify.CrossCutting.csproj", "{424649BB-B220-406E-998A-20A271980748}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LikeSpotify.CrossCutting", "LikeSpotify.CrossCutting\LikeSpotify.CrossCutting.csproj", "{424649BB-B220-406E-998A-20A271980748}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LikeSpotify.Repository", "LikeSpotify.Repository\LikeSpotify.Repository.csproj", "{FA6BE6C0-1AC4-46A7-B6ED-AFE70F9F1370}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{424649BB-B220-406E-998A-20A271980748}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{424649BB-B220-406E-998A-20A271980748}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{424649BB-B220-406E-998A-20A271980748}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA6BE6C0-1AC4-46A7-B6ED-AFE70F9F1370}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA6BE6C0-1AC4-46A7-B6ED-AFE70F9F1370}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA6BE6C0-1AC4-46A7-B6ED-AFE70F9F1370}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA6BE6C0-1AC4-46A7-B6ED-AFE70F9F1370}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

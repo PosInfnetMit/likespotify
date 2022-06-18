@@ -8,3 +8,8 @@
 /src/LikeSpotify/LikeSpotify.CrossCutting/obj
 /src/LikeSpotify/LikeSpotify.Domain/bin/Debug/net5.0
 /src/LikeSpotify/LikeSpotify.Domain/obj
+/src/LikeSpotify/LikeSpotify.CrossCutting/bin/Debug/net6.0
+/src/LikeSpotify/LikeSpotify.Domain/bin/Debug/net6.0
+/src/LikeSpotify/LikeSpotify.Repository/bin/Debug/net6.0
+/src/LikeSpotify/LikeSpotify.Repository/obj
+/src/LikeSpotify/.vs
