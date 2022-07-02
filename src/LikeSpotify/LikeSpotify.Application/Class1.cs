@@ -1,4 +1,4 @@
-﻿namespace LikeSpotify.Repository
+﻿namespace LikeSpotify.Application
 {
     public class Class1
     {

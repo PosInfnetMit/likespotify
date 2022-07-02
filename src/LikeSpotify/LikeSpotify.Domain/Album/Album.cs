@@ -11,7 +11,7 @@ namespace LikeSpotify.Domain.Album
     {
         
         public int Nome { get; set; }
-        public DateTime Data_Lancamento { get; set; }
+        public DateTime DataLancamento { get; set; }
         public IList<Midia> Midias { get; set; }
 
 

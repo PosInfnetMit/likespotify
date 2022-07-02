@@ -15,3 +15,5 @@
 /src/LikeSpotify/.vs
 /src/LikeSpotify/LikeSpotify.Api/bin/Debug/net6.0
 /src/LikeSpotify/LikeSpotify.Api/obj
+/src/LikeSpotify/LikeSpotify.Application/bin/Debug/net6.0
+/src/LikeSpotify/LikeSpotify.Application/obj
