@@ -16,6 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\LikeSpotify.Application\LikeSpotify.Application.csproj" />
     <ProjectReference Include="..\LikeSpotify.Repository\LikeSpotify.Repository.csproj" />
   </ItemGroup>
 

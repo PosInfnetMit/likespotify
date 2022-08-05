@@ -1,4 +1,5 @@
 ﻿using FluentValidation;
+using LikeSpotify.CrossCutting.Entity;
 using LikeSpotify.CrossCutting.Utils;
 using LikeSpotify.Domain.Conta.Rules;
 using LikeSpotify.Domain.Conta.ValueObjects;
@@ -10,10 +11,14 @@ using System.Threading.Tasks;
 
 namespace LikeSpotify.Domain.Conta
 {
-    public class Usuario
+    public class Usuario : Entity<Guid>
     {
         public string Login { get; set; }
         public string Nome { get; set; }
+
+        public CPF Cpf { get; set; }    
+
+        public DateTime DtNascimento { get; set; }
 
         public Email Email { get; set; }
 

@@ -9,7 +9,7 @@ builder.Services.AddControllers();
 
 builder.Services.AddDbContext<LikeSpotifyContext>(c =>
 {
-    c.UseSqlServer(builder.Configuration.GetConnectionString("SpotifyLite"));
+    c.UseSqlServer(builder.Configuration.GetConnectionString("LikeSpotify"));
 });
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

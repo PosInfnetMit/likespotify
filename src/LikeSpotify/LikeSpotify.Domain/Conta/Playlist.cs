@@ -1,4 +1,5 @@
-﻿using LikeSpotify.Domain.Album;
+﻿using LikeSpotify.CrossCutting.Entity;
+using LikeSpotify.Domain.Album;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace LikeSpotify.Domain.Conta
 {
-    public class Playlista
+    public class Playlista : Entity<Guid>
     {
         public string Nome { get; set; }
         public string Descricao { get; set; }
