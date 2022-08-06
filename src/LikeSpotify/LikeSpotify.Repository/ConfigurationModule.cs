@@ -26,6 +26,8 @@ namespace LikeSpotify.Repository
             services.AddScoped<IArtistaRepository, ArtistaRepository>();
             services.AddScoped<IAlbumRepository, AlbumRepository>();
             services.AddScoped<IUsuarioRepository, UsuarioRepository>();
+            services.AddScoped<IPlaylistRepository, PlaylistRepository>();
+
 
             return services;
         }

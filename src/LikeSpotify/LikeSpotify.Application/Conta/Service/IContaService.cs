@@ -9,8 +9,10 @@ namespace LikeSpotify.Application.Conta.Service
 {
     public interface IContaService
     {
-        Task<UsuarioOutputDto> Criar (UsuarioInputDto dto);
-        Task<UsuarioOutputDto> ObterPorLogin(string login);
+        Task<UsuarioOutputDto> Criar (UsuarioInputDto dto);        
+        Task<UsuarioOutputDto> ObterPorLogin(string login,string password);
+        Task<PlaylistOutputDto> CriarPlayList(PlaylistInputDto dto);
+        
 
 
 

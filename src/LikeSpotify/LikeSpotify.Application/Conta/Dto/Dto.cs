@@ -10,8 +10,7 @@ namespace LikeSpotify.Application.Conta.Dto
 {
     public record UsuarioInputDto(
         [Required(ErrorMessage = "Login é obrigatório")] string Login,
-        [Required(ErrorMessage = "Nome é obrigatório")] string Nome,
-        [Required(ErrorMessage = "CPF é obrigatório")] string Cpf,
+        [Required(ErrorMessage = "Nome é obrigatório")] string Nome,        
         [Required(ErrorMessage = "Data de nascimento é obrigatório")] DateTime DtNascimento,
         [Required(ErrorMessage = "E-Mail é obrigatório")] string Email,
         [Required(ErrorMessage = "Password é obrigatório")] string Password);

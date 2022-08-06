@@ -6,10 +6,7 @@ using System.Threading.Tasks;
 
 namespace LikeSpotify.Domain.Conta.Repository
 {
-    public interface IUsuarioRepository : CrossCutting.Repository.IRepository<Usuario>
+    public  interface IPlaylistRepository : CrossCutting.Repository.IRepository<Playlist>
     {
-        Task<Usuario> GetUserByPassword(string username, string password);
-        
-
     }
 }

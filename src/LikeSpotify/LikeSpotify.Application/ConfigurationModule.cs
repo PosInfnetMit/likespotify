@@ -1,4 +1,5 @@
 ﻿using LikeSpotify.Application.Album.Service;
+using LikeSpotify.Application.Conta.Service;
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -14,6 +15,7 @@ namespace LikeSpotify.Application
 
             services.AddScoped<IArtistaService, ArtistaService>();
             services.AddScoped<IAlbumService, AlbumService>();
+            services.AddScoped<IContaService, ContaService>();
 
             return services;
         }
