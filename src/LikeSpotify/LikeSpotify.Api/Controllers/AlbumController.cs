@@ -18,12 +18,14 @@ namespace LikeSpotify.Api.Controllers
             _mediator = mediator;
         }
 
+        [Route("todos_albuns")]
         [HttpGet]
         public async Task<IActionResult> Get()
         {
             return Ok(await _mediator.Send(new GetAllAlbumQuery()));
         }
 
+        [Route("criar_album")]
         [HttpPost()]
         public async Task<IActionResult> Criar(AlbumInputDto dto)
         {

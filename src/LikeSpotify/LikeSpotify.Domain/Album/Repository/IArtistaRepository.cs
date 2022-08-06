@@ -8,5 +8,9 @@ namespace LikeSpotify.Domain.Album.Repository
 {
     public interface IArtistaRepository : CrossCutting.Repository.IRepository<Artista>
     {
+        Task<Artista> ObterPorNome(string nome);
+
+
+
     }
 }
