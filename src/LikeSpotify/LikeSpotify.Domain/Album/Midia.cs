@@ -1,10 +1,8 @@
 ﻿using LikeSpotify.CrossCutting.Entity;
 using LikeSpotify.Domain.Album.ValueObject;
+using LikeSpotify.Domain.Conta;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace LikeSpotify.Domain.Album
 {
@@ -14,6 +12,7 @@ namespace LikeSpotify.Domain.Album
         public string Nome { get; set; }
         public int Ordem { get; set; }
         public Duracao Tempo_Midia { get; set; }
+        public virtual IList<Playlist> Playlists { get; set; }
 
 
     }

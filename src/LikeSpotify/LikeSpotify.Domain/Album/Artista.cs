@@ -13,11 +13,11 @@ namespace LikeSpotify.Domain.Album
         public string Nome { get; set; }
         public string Email { get; set; }
         public string Descricao { get; set; }
-        public bool E_Banda { get; set; }
+        public Boolean E_Banda { get; set; }
 
         public string Foto { get; set; }
 
-        public IList<Album> Albuns { get; set; }
+        public virtual IList<Album> Albuns { get; set; }
 
 
 

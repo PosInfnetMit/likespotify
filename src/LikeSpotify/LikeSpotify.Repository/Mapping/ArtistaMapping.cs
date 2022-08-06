@@ -17,7 +17,7 @@ namespace LikeSpotify.Repository.Mapping
             builder.HasKey(x => x.Id);
             builder.Property(x => x.Nome).IsRequired().HasMaxLength(200);
             builder.Property(x => x.Descricao).IsRequired().HasMaxLength(1024);
-            builder.Property(x => x.E_Banda).HasColumnType("bool").IsRequired();
+            builder.Property(x => x.E_Banda).HasColumnType("bit").IsRequired();
             builder.Property(x => x.Email).HasMaxLength(100);
             builder.Property(x => x.Foto).IsRequired().HasMaxLength(500);
 

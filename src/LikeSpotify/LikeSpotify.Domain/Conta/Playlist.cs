@@ -8,13 +8,12 @@ using System.Threading.Tasks;
 
 namespace LikeSpotify.Domain.Conta
 {
-    public class Playlista : Entity<Guid>
+    public class Playlist : Entity<Guid>
     {
         public string Nome { get; set; }
         public string Descricao { get; set; }
-        public int Ordem_Execucao { get; set; }
-        public DateTime Data_Criacao { get; set; }
-        public IList<Midia> Midias { get; set; }
+        public int Ordem_Execucao { get; set; }        
+        public virtual IList<Midia> Midias { get; set; }
 
 
     }

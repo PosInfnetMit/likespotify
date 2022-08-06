@@ -9,12 +9,13 @@ namespace LikeSpotify.Repository.Context
 {
     public class LikeSpotifyContext : DbContext
     {
-        public LikeSpotifyContext(DbContextOptions options) : base(options)
+        public LikeSpotifyContext(DbContextOptions<LikeSpotifyContext> options) : base(options)
         {
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
+            optionsBuilder.UseLazyLoadingProxies();
             base.OnConfiguring(optionsBuilder);
         }
 

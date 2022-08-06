@@ -14,15 +14,15 @@ namespace LikeSpotify.Domain.Conta
     public class Usuario : Entity<Guid>
     {
         public string Login { get; set; }
-        public string Nome { get; set; }
-
-        public CPF Cpf { get; set; }    
+        public string Nome { get; set; }        
 
         public DateTime DtNascimento { get; set; }
 
         public Email Email { get; set; }
 
        public Password Password { get; set; }
+
+        public virtual IList<Playlist> Playlists { get; set; }
 
 
         public void SetPassword()
