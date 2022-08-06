@@ -16,6 +16,8 @@ namespace LikeSpotify.Application
             services.AddScoped<IArtistaService, ArtistaService>();
             services.AddScoped<IAlbumService, AlbumService>();
             services.AddScoped<IContaService, ContaService>();
+            services.AddScoped<IPlaylistService, PlaylistService>();
+
 
             return services;
         }

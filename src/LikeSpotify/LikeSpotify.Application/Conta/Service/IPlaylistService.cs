@@ -7,16 +7,9 @@ using System.Threading.Tasks;
 
 namespace LikeSpotify.Application.Conta.Service
 {
-    public interface IContaService
+    public interface IPlaylistService
     {
-        Task<UsuarioOutputDto> Criar (UsuarioInputDto dto);        
-        Task<UsuarioOutputDto> ObterPorLogin(string login,string password);
-        
-        
-
-
-
-
-
+        Task<PlaylistOutputDto> Criar(PlaylistInputDto dto);
+        Task<UsuarioOutputDto> ObterUsuarioPlaylist(string login);
     }
 }

@@ -2,6 +2,7 @@
 using LikeSpotify.Domain.Conta.Repository;
 using LikeSpotify.Repository.Context;
 using LikeSpotify.Repository.Database;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,5 +17,8 @@ namespace LikeSpotify.Repository.Repository
         public PlaylistRepository(LikeSpotifyContext likeSpotifyContext) : base(likeSpotifyContext)
         {
         }
+
+        
+
     }
 }

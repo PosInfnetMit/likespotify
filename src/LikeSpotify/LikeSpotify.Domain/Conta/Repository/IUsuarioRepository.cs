@@ -9,7 +9,8 @@ namespace LikeSpotify.Domain.Conta.Repository
     public interface IUsuarioRepository : CrossCutting.Repository.IRepository<Usuario>
     {
         Task<Usuario> GetUserByPassword(string username, string password);
-        
+
+        Task<Usuario> GetUserInPlaylist(string username);
 
     }
 }
