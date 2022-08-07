@@ -16,6 +16,8 @@ namespace LikeSpotify.Application.Album.Profile
             CreateMap<LikeSpotify.Domain.Album.Midia, MidiaOutputDto>()
                 .ForMember(x => x.Duracao, f => f.MapFrom(m => m.Tempo_Midia.Valor));
 
+            CreateMap<ArtistaInputDto, LikeSpotify.Domain.Album.Artista>();
+            CreateMap<LikeSpotify.Domain.Album.Artista, ArtistaOutputDto>();
 
 
         }

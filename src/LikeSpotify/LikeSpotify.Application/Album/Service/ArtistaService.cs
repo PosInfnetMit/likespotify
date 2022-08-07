@@ -13,31 +13,31 @@ namespace LikeSpotify.Application.Album.Service
     {
 
         private readonly IArtistaRepository _artistaRepository;
-        private readonly IMapper _mapper;
+        private readonly IMapper mapper;
 
         public ArtistaService(IArtistaRepository artistaRepository, IMapper mapper)
         {
             _artistaRepository = artistaRepository;
-            _mapper = mapper;
+            this.mapper = mapper;
         }
 
         public async Task<ArtistaOutputDto> Criar(ArtistaInputDto dto)
         {
-            var artista = _mapper.Map<LikeSpotify.Domain.Album.Artista>(dto);
+            var artista = this.mapper.Map<LikeSpotify.Domain.Album.Artista>(dto);
             await _artistaRepository.Save(artista);
-            return _mapper.Map<ArtistaOutputDto>(artista);
+            return this.mapper.Map<ArtistaOutputDto>(artista);
         }
 
         public async Task<ArtistaOutputDto> ObterPorArtista(string nome)
         {
             var artista = await _artistaRepository.ObterPorNome(nome);
-            return _mapper.Map<ArtistaOutputDto>(artista);
+            return this.mapper.Map<ArtistaOutputDto>(artista);
         }
 
         public async Task<List<ArtistaOutputDto>> ObterTodos()
         {
             var artista = await _artistaRepository.GetAll();
-            return _mapper.Map<List<ArtistaOutputDto>>(artista);
+            return this.mapper.Map<List<ArtistaOutputDto>>(artista);
         }
     }
 }

@@ -11,8 +11,10 @@ namespace LikeSpotify.Application.Album.Dto
     public record ArtistaInputDto (
             [Required(ErrorMessage = "Nome do artista é obrigatório")] string Nome,
             [Required(ErrorMessage = "E-Mail do artista é obrigatório")] string Email,
-            [Required(ErrorMessage = "Descrição é obrigatório")] string Descricao,bool EBanda);
-    public record ArtistaOutputDto(Guid Id,string Nome, string Email, string Descricao, bool EBanda);
+            [Required(ErrorMessage = "Descrição é obrigatório")] string Descricao,
+            [Required(ErrorMessage = "Incluir link da foto")] string Foto,
+            bool EBanda);
+    public record ArtistaOutputDto(Guid Id,string Nome, string Email, string Descricao,string Foto, bool EBanda);
 
 
     public record AlbumInputDto(
