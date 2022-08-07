@@ -9,9 +9,9 @@ namespace LikeSpotify.Application.Album.Handler.Query
 {
     public class GetAllArtistaQueryResponse
     {
-        public IList<ArtistaOutputDto> Artistas { get; set; }
+        public IEnumerable<ArtistaOutputDto> Artistas { get; set; }
 
-        public GetAllArtistaQueryResponse(IList<ArtistaOutputDto> artistas)
+        public GetAllArtistaQueryResponse(IEnumerable<ArtistaOutputDto> artistas)
         {
             Artistas = artistas;
         }

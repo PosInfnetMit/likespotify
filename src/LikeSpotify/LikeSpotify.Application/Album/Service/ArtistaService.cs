@@ -24,8 +24,8 @@ namespace LikeSpotify.Application.Album.Service
         public async Task<ArtistaOutputDto> Criar(ArtistaInputDto dto)
         {
             var artista = this.mapper.Map<LikeSpotify.Domain.Album.Artista>(dto);
-            await _artistaRepository.Save(artista);
-            return this.mapper.Map<ArtistaOutputDto>(artista);
+            await _artistaRepository.Save(artista);            
+            return this.mapper.Map<ArtistaOutputDto>(artista); 
         }
 
         public async Task<ArtistaOutputDto> ObterPorArtista(string nome)
@@ -34,10 +34,10 @@ namespace LikeSpotify.Application.Album.Service
             return this.mapper.Map<ArtistaOutputDto>(artista);
         }
 
-        public async Task<List<ArtistaOutputDto>> ObterTodos()
+        public async Task<IEnumerable<ArtistaOutputDto>> ObterTodos()
         {
             var artista = await _artistaRepository.GetAll();
-            return this.mapper.Map<List<ArtistaOutputDto>>(artista);
+            return this.mapper.Map<IEnumerable<ArtistaOutputDto>>(artista);
         }
     }
 }

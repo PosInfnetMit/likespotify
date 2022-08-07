@@ -1,5 +1,4 @@
 ﻿using LikeSpotify.Application.Album.Dto;
-
 namespace LikeSpotify.Application.Album.Profile
 {
     public class AlbumProfile : AutoMapper.Profile
@@ -18,6 +17,7 @@ namespace LikeSpotify.Application.Album.Profile
 
             CreateMap<ArtistaInputDto, LikeSpotify.Domain.Album.Artista>();
             CreateMap<LikeSpotify.Domain.Album.Artista, ArtistaOutputDto>();
+
 
 
         }

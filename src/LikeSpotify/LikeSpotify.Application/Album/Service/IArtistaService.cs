@@ -10,7 +10,7 @@ namespace LikeSpotify.Application.Album.Service
     public  interface IArtistaService
     {
         Task<ArtistaOutputDto> Criar(ArtistaInputDto dto);
-        Task<List<ArtistaOutputDto>> ObterTodos();
+        Task<IEnumerable<ArtistaOutputDto>> ObterTodos();
         Task<ArtistaOutputDto> ObterPorArtista(string nome);
     }
 }
