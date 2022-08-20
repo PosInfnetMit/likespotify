@@ -11,7 +11,7 @@ namespace LikeSpotify.Repository.Mapping
             builder.ToTable("Usuarios");
             builder.HasKey(x => x.Id);
             builder.Property(x => x.Id).ValueGeneratedOnAdd();
-            builder.Property(x => x.Nome).IsRequired().HasMaxLength(200);
+            builder.Property(x => x.Nome).IsRequired().HasColumnType("varchar").HasMaxLength(200);
 
             builder.OwnsOne(x => x.Password, p =>
             {
@@ -20,7 +20,7 @@ namespace LikeSpotify.Repository.Mapping
 
             builder.OwnsOne(x => x.Email, p =>
             {
-                p.Property(f => f.Valor).HasColumnName("Email").IsRequired().HasMaxLength(1024);
+                p.Property(f => f.Valor).HasColumnName("Email").IsRequired().HasColumnType("varchar").HasMaxLength(1024);
             });
 
             builder.HasMany(x => x.Playlists).WithOne();

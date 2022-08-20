@@ -14,8 +14,8 @@ namespace LikeSpotify.Application.Conta.Dto
         [Required(ErrorMessage = "Data de nascimento é obrigatório")] DateTime DtNascimento,
         [Required(ErrorMessage = "E-Mail é obrigatório")] string Email,
         [Required(ErrorMessage = "Password é obrigatório")] string Password);
-
-    public record UsuarioOutputDto(Guid Id,string Login,string Nome,string Cpf,DateTime DtNascimento,string Email,string Password,IList<PlaylistOutputDto>Playlists);
+    
+    
 
     public record PlaylistInputDto(
         [Required(ErrorMessage= "Nome da lista obrigatório")] string Nome,

@@ -10,7 +10,7 @@ namespace LikeSpotify.Domain.Album
     public class Album : Entity<Guid>
     {
         
-        public int Nome { get; set; }
+        public string Nome { get; set; }
         public DateTime DataLancamento { get; set; }
         public virtual IList<Midia> Midias { get; set; }
 

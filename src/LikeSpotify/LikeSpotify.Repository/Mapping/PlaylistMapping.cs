@@ -17,7 +17,7 @@ namespace LikeSpotify.Repository.Mapping
             builder.HasKey(x => x.Id);
             builder.Property(x => x.Id).ValueGeneratedOnAdd();
 
-            builder.Property(x => x.Nome).IsRequired().HasMaxLength(200);
+            builder.Property(x => x.Nome).IsRequired().HasColumnType("varchar").HasMaxLength(200);
 
             builder.HasMany(x => x.Midias).WithMany(x => x.Playlists);
 

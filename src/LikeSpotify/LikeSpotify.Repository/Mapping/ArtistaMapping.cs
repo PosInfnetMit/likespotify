@@ -14,11 +14,11 @@ namespace LikeSpotify.Repository.Mapping
         public void Configure(EntityTypeBuilder<Artista> builder)
         {
             builder.ToTable("Artista");
-            builder.HasKey(x => x.Id);
-            builder.Property(x => x.Nome).IsRequired().HasMaxLength(200);
-            builder.Property(x => x.Descricao).IsRequired().HasMaxLength(1024);
+            builder.HasKey(x => x.Id);            
+            builder.Property(x => x.Nome).IsRequired().HasColumnType("varchar").HasMaxLength(200);
+            builder.Property(x => x.Descricao).IsRequired().HasColumnType("varchar").HasMaxLength(1024);
             builder.Property(x => x.E_Banda).HasColumnType("bit").IsRequired();            
-            builder.Property(x => x.Foto).IsRequired().HasMaxLength(500);
+            builder.Property(x => x.Foto).IsRequired().HasColumnType("varchar").HasMaxLength(500);
 
             builder.HasMany(x => x.Albuns).WithOne().OnDelete(DeleteBehavior.Cascade);
         }

@@ -4,6 +4,7 @@ using LikeSpotify.Repository.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace LikeSpotify.Repository.Migrations
 {
     [DbContext(typeof(LikeSpotifyContext))]
-    partial class LikeSpotifyContextModelSnapshot : ModelSnapshot
+    [Migration("20220820150033_likespot_v2")]
+    partial class likespot_v2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -37,7 +39,7 @@ namespace LikeSpotify.Repository.Migrations
                     b.Property<string>("Nome")
                         .IsRequired()
                         .HasMaxLength(200)
-                        .HasColumnType("varchar(200)");
+                        .HasColumnType("nvarchar(200)");
 
                     b.HasKey("Id");
 
@@ -55,7 +57,7 @@ namespace LikeSpotify.Repository.Migrations
                     b.Property<string>("Descricao")
                         .IsRequired()
                         .HasMaxLength(1024)
-                        .HasColumnType("varchar(1024)");
+                        .HasColumnType("nvarchar(1024)");
 
                     b.Property<bool>("E_Banda")
                         .HasColumnType("bit");
@@ -63,12 +65,12 @@ namespace LikeSpotify.Repository.Migrations
                     b.Property<string>("Foto")
                         .IsRequired()
                         .HasMaxLength(500)
-                        .HasColumnType("varchar(500)");
+                        .HasColumnType("nvarchar(500)");
 
                     b.Property<string>("Nome")
                         .IsRequired()
                         .HasMaxLength(200)
-                        .HasColumnType("varchar(200)");
+                        .HasColumnType("nvarchar(200)");
 
                     b.HasKey("Id");
 
@@ -87,7 +89,7 @@ namespace LikeSpotify.Repository.Migrations
                     b.Property<string>("Nome")
                         .IsRequired()
                         .HasMaxLength(200)
-                        .HasColumnType("varchar(200)");
+                        .HasColumnType("nvarchar(200)");
 
                     b.Property<int>("Ordem")
                         .HasColumnType("int");
@@ -111,7 +113,7 @@ namespace LikeSpotify.Repository.Migrations
                     b.Property<string>("Nome")
                         .IsRequired()
                         .HasMaxLength(200)
-                        .HasColumnType("varchar(200)");
+                        .HasColumnType("nvarchar(200)");
 
                     b.Property<int>("Ordem_Execucao")
                         .HasColumnType("int");
@@ -141,7 +143,7 @@ namespace LikeSpotify.Repository.Migrations
                     b.Property<string>("Nome")
                         .IsRequired()
                         .HasMaxLength(200)
-                        .HasColumnType("varchar(200)");
+                        .HasColumnType("nvarchar(200)");
 
                     b.HasKey("Id");
 
@@ -215,7 +217,7 @@ namespace LikeSpotify.Repository.Migrations
                             b1.Property<string>("Valor")
                                 .IsRequired()
                                 .HasMaxLength(1024)
-                                .HasColumnType("varchar(1024)")
+                                .HasColumnType("nvarchar(1024)")
                                 .HasColumnName("Email");
 
                             b1.HasKey("UsuarioId");
