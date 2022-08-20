@@ -32,6 +32,12 @@ namespace LikeSpotify.Api.Controllers
             return Created($"{result.Artista.Id}", result.Artista);
         }
 
+        //[Route("obter_artista_por_nome")]
+        //public async Task<IActionResult> GetArtistaByNome (string nome)
+        //{
+        //    return Ok(await _mediator.Send(new GetAllArtistaQuery(nome)));
+
+        //}
 
 
     }

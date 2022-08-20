@@ -18,7 +18,7 @@ namespace LikeSpotify.Application.Album.Dto
         [Required(ErrorMessage = "Nome do album é obrigatório")] string Nome,
         [Required(ErrorMessage = "Data de lançamento é obrigatório")] DateTime DataLancamento,Guid IdArtista, List<MidiaInputDto> Midias);
     
-    public record MidiaInputDto ([Required(ErrorMessage = "Nome da mídia é obrigatório")] string Nome, int Ordem, int Duracao);
+    public record MidiaInputDto ([Required(ErrorMessage = "Nome da mídia é obrigatório")] string Nome, Guid IdMidia, int Ordem, int Duracao);
     
 
 

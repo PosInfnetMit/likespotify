@@ -32,7 +32,6 @@ namespace LikeSpotify.Application.Album.Handler
 
         public async Task<GetAllArtistaQueryResponse> Handle(GetAllArtistaQuery request, CancellationToken cancellationToken)
         {
-
             var result = await _artistaService.ObterTodos();
             return new GetAllArtistaQueryResponse(result);  
 
