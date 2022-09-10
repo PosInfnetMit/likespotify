@@ -17,3 +17,8 @@
 /src/LikeSpotify/LikeSpotify.Api/obj
 /src/LikeSpotify/LikeSpotify.Application/bin/Debug/net6.0
 /src/LikeSpotify/LikeSpotify.Application/obj
+/src/LikeSpotify/LikeSpotify.Api/bin/Release/net6.0
+/src/LikeSpotify/LikeSpotify.Application/bin/Release/net6.0
+/src/LikeSpotify/LikeSpotify.CrossCutting/bin/Release/net6.0
+/src/LikeSpotify/LikeSpotify.Domain/bin/Release/net6.0
+/src/LikeSpotify/LikeSpotify.Repository/bin/Release/net6.0
