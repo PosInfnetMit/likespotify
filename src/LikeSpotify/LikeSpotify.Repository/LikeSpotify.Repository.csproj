@@ -17,4 +17,8 @@
     <ProjectReference Include="..\LikeSpotify.Domain\LikeSpotify.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Migrations\" />
+  </ItemGroup>
+
 </Project>

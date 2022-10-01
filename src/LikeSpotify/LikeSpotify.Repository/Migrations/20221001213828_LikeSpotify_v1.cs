@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace LikeSpotify.Repository.Migrations
 {
-    public partial class LikeSpot : Migration
+    public partial class LikeSpotify_v1 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -14,11 +14,10 @@ namespace LikeSpotify.Repository.Migrations
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    Nome = table.Column<string>(type: "nvarchar(200)", maxLength: 200, nullable: false),
-                    Email = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: true),
-                    Descricao = table.Column<string>(type: "nvarchar(1024)", maxLength: 1024, nullable: false),
+                    Nome = table.Column<string>(type: "varchar(200)", maxLength: 200, nullable: false),
+                    Descricao = table.Column<string>(type: "varchar(1024)", maxLength: 1024, nullable: false),
                     E_Banda = table.Column<bool>(type: "bit", nullable: false),
-                    Foto = table.Column<string>(type: "nvarchar(500)", maxLength: 500, nullable: false)
+                    Foto = table.Column<string>(type: "varchar(500)", maxLength: 500, nullable: false)
                 },
                 constraints: table =>
                 {
@@ -31,9 +30,9 @@ namespace LikeSpotify.Repository.Migrations
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     Login = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Nome = table.Column<string>(type: "nvarchar(200)", maxLength: 200, nullable: false),
+                    Nome = table.Column<string>(type: "varchar(200)", maxLength: 200, nullable: false),
                     DtNascimento = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    Email = table.Column<string>(type: "nvarchar(1024)", maxLength: 1024, nullable: true),
+                    Email = table.Column<string>(type: "varchar(1024)", maxLength: 1024, nullable: true),
                     Password = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
@@ -46,7 +45,7 @@ namespace LikeSpotify.Repository.Migrations
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    Nome = table.Column<int>(type: "int", maxLength: 200, nullable: false),
+                    Nome = table.Column<string>(type: "varchar(200)", maxLength: 200, nullable: false),
                     DataLancamento = table.Column<DateTime>(type: "datetime2", nullable: false),
                     ArtistaId = table.Column<Guid>(type: "uniqueidentifier", nullable: true)
                 },
@@ -66,7 +65,7 @@ namespace LikeSpotify.Repository.Migrations
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    Nome = table.Column<string>(type: "nvarchar(200)", maxLength: 200, nullable: false),
+                    Nome = table.Column<string>(type: "varchar(200)", maxLength: 200, nullable: false),
                     Descricao = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Ordem_Execucao = table.Column<int>(type: "int", nullable: false),
                     UsuarioId = table.Column<Guid>(type: "uniqueidentifier", nullable: true)
@@ -86,7 +85,7 @@ namespace LikeSpotify.Repository.Migrations
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    Nome = table.Column<string>(type: "nvarchar(200)", maxLength: 200, nullable: false),
+                    Nome = table.Column<string>(type: "varchar(200)", maxLength: 200, nullable: false),
                     Ordem = table.Column<int>(type: "int", nullable: false),
                     Tempo_Midia = table.Column<int>(type: "int", nullable: true),
                     AlbumId = table.Column<Guid>(type: "uniqueidentifier", nullable: true)
