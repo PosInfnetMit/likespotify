@@ -2,7 +2,6 @@
 using LikeSpotify.Application.Conta.Handle.Command;
 using LikeSpotify.Application.Conta.Handle.Query;
 using MediatR;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace LikeSpotify.Api.Controllers
@@ -20,7 +19,7 @@ namespace LikeSpotify.Api.Controllers
 
         [Route("obter_playlist_login")]
         [HttpGet]
-        public async Task<IActionResult> GetPlaylistLogin (string login)
+        public async Task<IActionResult> GetPlaylistLogin(string login)
         {
             return Ok(await _mediator.Send(new GetPlaylistQuery(login)));
         }
@@ -31,6 +30,14 @@ namespace LikeSpotify.Api.Controllers
         {
             var result = await _mediator.Send(new CreatePlaylistCommand(dto));
             return Created($"{result.Playlist.Id}", result.Playlist);
+        }
+
+        [Route("deletar_playlist")]
+        [HttpDelete]
+        public async Task<IActionResult> Deletar(Guid id)
+        {
+            var result = await _mediator.Send(new DeletePlaylistCommand(id));
+            return Ok(result);
         }
     }
 

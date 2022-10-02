@@ -1,6 +1,5 @@
 using LikeSpotify.Application;
 using LikeSpotify.Repository;
-using LikeSpotify.Repository.Context;
 using Microsoft.EntityFrameworkCore;
 
 public class Program
@@ -15,7 +14,7 @@ public class Program
 
         builder.Services
             .RegisterApplication()
-            .RegisterRepository(builder.Configuration.GetConnectionString("LikeSpotify"));        
+            .RegisterRepository(builder.Configuration.GetConnectionString("LikeSpotify"));
 
         // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
         builder.Services.AddEndpointsApiExplorer();
@@ -23,14 +22,11 @@ public class Program
 
         var app = builder.Build();
 
-        // Configure the HTTP request pipeline.
-        //if (app.Environment.IsDevelopment())
-        //{
-            app.UseSwagger();
-            app.UseSwaggerUI();
-        //}
 
-        app.UseHttpsRedirection();
+        app.UseSwagger();
+        app.UseSwaggerUI();
+
+     //   app.UseHttpsRedirection();
 
         app.UseAuthorization();
 

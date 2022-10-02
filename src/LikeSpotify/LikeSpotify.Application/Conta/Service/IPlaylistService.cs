@@ -11,5 +11,6 @@ namespace LikeSpotify.Application.Conta.Service
     {
         Task<PlaylistOutputDto> Criar(PlaylistInputDto dto);
         Task<UsuarioOutputDto> ObterUsuarioPlaylist(string login);
+        Task<PlaylistOutputDto> Deletar(Guid id);
     }
 }

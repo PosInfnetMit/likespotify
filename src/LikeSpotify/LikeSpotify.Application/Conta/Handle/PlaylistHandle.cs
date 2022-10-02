@@ -11,7 +11,10 @@ using System.Threading.Tasks;
 namespace LikeSpotify.Application.Conta.Handle
 {
     public class PlaylistHandle : IRequestHandler<CreatePlaylistCommand, CreatePlaylistCommandResponse>,
-                                  IRequestHandler<GetPlaylistQuery, GetPlaylistQueryResponse>
+                                  IRequestHandler<GetPlaylistQuery, GetPlaylistQueryResponse>,
+                                  IRequestHandler<DeletePlaylistCommand, DeletePlaylistCommandResponse>
+
+
     {
 
         private readonly IPlaylistService _playlistService;
@@ -31,6 +34,12 @@ namespace LikeSpotify.Application.Conta.Handle
         {
             var result = await _playlistService.ObterUsuarioPlaylist(request.Login);
             return new GetPlaylistQueryResponse(result);
+        }
+
+        public async Task<DeletePlaylistCommandResponse> Handle(DeletePlaylistCommand request, CancellationToken cancellationToken)
+        {
+            var result = await _playlistService.Deletar(request.PlayList);
+            return new DeletePlaylistCommandResponse(result);
         }
     }
 }

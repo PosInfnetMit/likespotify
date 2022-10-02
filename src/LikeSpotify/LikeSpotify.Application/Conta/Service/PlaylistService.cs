@@ -31,6 +31,17 @@ namespace LikeSpotify.Application.Conta.Service
             return _mapper.Map<PlaylistOutputDto>(playlist);
         }
 
+        public async Task<PlaylistOutputDto> Deletar(Guid id)
+        {
+            var playList = await _playlistRepository.Get(id);
+            if (playList == null) return null;
+
+            await _playlistRepository.Delete(playList);
+
+            return _mapper.Map<PlaylistOutputDto>(playList);
+
+        }
+
         public async Task<UsuarioOutputDto> ObterUsuarioPlaylist(string login)
         {
             var usuario = await _usuarioRepository.GetUserInPlaylist(login);
